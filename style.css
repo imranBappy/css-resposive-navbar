@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/* color */
+:root {
+  --red: var(#8a0303);
+}
+/* common css */
+div.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.section__heading {
+  color: #8a0303;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* navbar__section */
+nav.navbar {
+  border-bottom: 5px solid #8a0303;
+  box-shadow: 0px 4px 17px -3px rgba(0, 0, 0, 0.25);
+}
+div.navbar__toggle {
+  display: none;
+}
+div.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: auto;
+  transition: height 4s;
+}
+
+div.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+div.navbar__brand > a {
+  font-size: 2rem;
+  color: #8a0303;
+  font-weight: bold;
+}
+ul.navbar__links {
+  display: flex;
+  align-items: center;
+}
+ul.navbar__links > li {
+  padding: 25px 30px;
+
+  border-right: 2px solid #8a0303;
+}
+ul.navbar__links > li:first-child {
+  border-left: 2px solid #8a0303;
+}
+ul.navbar__links > li > a {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #8a0303;
+}
+ul.navbar__links > li:hover {
+  background-color: #8a0303;
+}
+ul.navbar__links > li:hover > a {
+  color: #ffffff;
+}
+
+/* media queries */
+@media screen and (max-width: 1280px) {
+  div.container {
+    padding: 0px 30px;
+  }
+}
+@media screen and (max-width: 860px) {
+  div.navbar__toggle {
+    display: block;
+  }
+  ul.navbar__links {
+    display: flex;
+    align-items: center;
+  }
+  ul.navbar__links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  ul.navbar__links > li {
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #8a0303;
+    width: 100%;
+  }
+  ul.navbar__links > li:first-child {
+    border-left: none;
+  }
+  ul.navbar__links > li:last-child {
+    border-bottom: none;
+  }
+  .navbar__brand {
+    min-height: 75px;
+  }
+}

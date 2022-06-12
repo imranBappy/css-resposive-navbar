@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blood Bank</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar__container" id="navbar__container">
+          <div class="navbar__brand">
+            <a href="#">Blood Bank</a>
+          </div>
+          <div class="navbar__toggle">
+            <button id="navbar__toggle__btn">...</button>
+          </div>
+          <ul id="navbar__links" class="navbar__links">
+            <li class="navbar__link">
+              <a href="#">Donor</a>
+            </li>
+            <li class="navbar__link">
+              <a href="#">Join</a>
+            </li>
+            <li class="navbar__link">
+              <a href="#">About</a>
+            </li>
+            <li class="navbar__link">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const toggle__btn = document.getElementById("navbar__toggle__btn");
+      const navbar__container = document.getElementById("navbar__container");
+      const navbar__links = document.getElementById("navbar__links");
+
+      toggle__btn.addEventListener("click", () => {
+        console.log(navbar__links.style.display);
+        if (!navbar__links.style.display) {
+          navbar__container.style.height = "75px";
+          navbar__links.style.display = "none";
+        } else {
+          navbar__container.style.height = "100%";
+          navbar__links.style.display = "";
+        }
+      });
+    </script>
+  </body>
+</html>
